@@ -16,7 +16,7 @@
 :root {
 	/* startje */
 	--color-text:#111;
-	--color-background:#eee;
+	--color-background:#ffffff;
 }
 
 
@@ -28,4 +28,21 @@
 /****************/
 
 /* jouw code */
+header {
+	background-color: var(--color-background);
+	padding: 1.5em;
+}
+
+ul img {
+	height: 3.5em;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 6em;
+  margin: 0;
+  padding: 0;
+}
+
 
