@@ -2,21 +2,17 @@
 /* CSS REMEDY */
 /**************/
 *, *::after, *::before {
-  box-sizing:border-box;  
+  box-sizing: border-box;  
 }
-
-
-
-
-
 
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-	/* startje */
-	--color-text:#111;
-	--color-background:#ffffff;
+  --color-text: #000000;
+  --color-background: #ffffff;
+  --color-footer-background: #2A5729;
+  --color-footer-text: #ffffff;
 }
 
 
@@ -27,22 +23,123 @@
 /* JOUW STYLING */
 /****************/
 
-/* jouw code */
+p {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+}
+
 header {
-	background-color: var(--color-background);
-	padding: 1.5em;
-}
-
-ul img {
-	height: 3.5em;
-}
-
-.nav ul {
-  list-style: none;
+  background-color: var(--color-background);
+  padding: 1.5em;
   display: flex;
-  gap: 6em;
-  margin: 0;
-  padding: 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* main */
+main button {
+  background-color: #FFBC0F;
+  color: black;
+  padding: 1em 2em;
+  border: none;
+  border-radius: 5em;
+}
+
+img {
+  max-width: 100%;  /* nooit breder dan container */
+  height: auto;     /* behoudt verhouding */
+  display: block;   /* voorkomt kleine witruimtes onder afbeeldingen */
+}
+
+header > button {
+  margin-left: auto;
+  background: none;
+  border: none;
+}
+
+header img {
+  height: 3.5em;
+}
+
+main section:nth-of-type(3) {
+	background-color: #201360;
+	color: white;
+}
+
+/*plaatjes bij topverhalen*/
+main section:nth-of-type(4) img {
+	height: 10em;
+	border-radius: 1em;
 }
 
 
+nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: var(--color-background);
+  translate: 100%; /* standaard buiten beeld */
+  transition: translate 0.5s ease;
+  padding: 2em;
+}
+
+/* hamburgermenu open open */
+nav.is-open {
+  translate: 0; /* in beeld */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2em 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+nav li a {
+  color: var(--color-text);
+  font-size: 1.2em;
+}
+
+/* footer styling */
+footer {
+  background-color: var(--color-footer-background);
+  color: var(--color-footer-text);
+  padding: 2em;
+  text-align: center;
+}
+
+
+
+
+/****************************************************************/
+/* styling voor de header als de browser minimaal 38em breed is */
+/****************************************************************/
+@media (min-width: 38em) {
+
+  nav {
+    position: static; /* menu terug in de header */
+    translate: 0;     /* altijd zichtbaar */
+    background: none;
+    padding: 0;
+  }
+
+  nav button {
+    display: none;   /* kruisje verbergen */
+  }
+
+  nav ul {
+    flex-direction: row; /* horizontaal */
+    gap: 2em;
+    margin: 0;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-size: 1em;
+  }
+}

@@ -22,7 +22,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Blauw
 
   #### Je focus:
-  hier je focus (kies uit responsive óf surface plane)
+  Responsive
  
 </details>
 
@@ -41,11 +41,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   Homepagina
-  <img src="readme-images/homepagina.jpg" width="375px" alt="homepagina">
+  <img src="readme-images/homepagina.png" width="375px" alt="homepagina">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  Onderwerpen die wij belangrijk vinden
+  <img src="readme-images/tweedepagina.png" width="375px" alt="tweede pagina">
  
 </details>
 
@@ -69,10 +69,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+  https://miro.com/welcomeonboard/bDIySVRuaGsxV0FGK1IvTUd0VWdLRWEySEQ5WStteHRvNGkyWThETGV5amFDSlpRUkF0c3ZVVVJCUmhmN1U0Q1kzVTVmSWhXSU9PWXQ2MWJvU2lhVnZvWnIyOSt0TFJyNlk1VTRlbk1tQkorNy94ZTIvZXBObnhTVStlSGs1WVpQdGo1ZEV3bUdPQWRZUHQzSGl6V2NBPT0hdjE=?share_link_id=310430917738
+  Link naar miro bord waarop ik de breakdown schetsen gemaakt heb.
 
   ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
+  https://miro.com/welcomeonboard/bDIySVRuaGsxV0FGK1IvTUd0VWdLRWEySEQ5WStteHRvNGkyWThETGV5amFDSlpRUkF0c3ZVVVJCUmhmN1U0Q1kzVTVmSWhXSU9PWXQ2MWJvU2lhVnZvWnIyOSt0TFJyNlk1VTRlbk1tQkorNy94ZTIvZXBObnhTVStlSGs1WVpQdGo1ZEV3bUdPQWRZUHQzSGl6V2NBPT0hdjE=?share_link_id=310430917738
+  Link naar miro bord waarop ik de breakdown schetsen gemaakt heb.
 
   ### wellicht nog een dynamisch deel (bijv filter): 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
@@ -91,6 +93,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 
+  Dit ging goed: de start maken van de html ging goed, met alle plaatjes toevoegen, vooral door de breakdown
+  schets die ik al gemaakt had.
+
+  Dit was lastig: ik vond het lastig dat we geen classes en divs mogen gebruiken, hierdoor zat ik best wel
+  in de knoop met alle sections en lukt het me niet zo goed om die met css allemaal te stylen.
+
+  <img src="readme-images/screenshotwk1.png" width="375px" alt="voortgang screenshot">
+  <img src="readme-images/screenshotwk1-2.png" width="375px" alt="voortgang screenshot site">
 
   ### Agenda voor meeting
   samen met je groepje opstellen
