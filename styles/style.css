@@ -28,6 +28,10 @@ p {
   line-height: 1.6;
 }
 
+h1 {
+	margin-bottom: 0.75em;
+}
+
 header {
   background-color: var(--color-background);
   padding: 1.5em;
@@ -36,22 +40,13 @@ header {
   align-items: center;
 }
 
-/* main */
-main button {
-  background-color: #FFBC0F;
-  color: black;
-  padding: 1em 2em;
-  border: none;
-  border-radius: 5em;
-}
-
 img {
   max-width: 100%;  /* nooit breder dan container */
-  height: auto;     /* behoudt verhouding */
+  height: auto;     /* verhouding blijft */
   display: block;   /* voorkomt kleine witruimtes onder afbeeldingen */
 }
 
-header > button {
+header > button { /*de button in de header (hamburgermenu knop) */
   margin-left: auto;
   background: none;
   border: none;
@@ -59,6 +54,18 @@ header > button {
 
 header img {
   height: 3.5em;
+}
+
+
+
+
+/* main */
+main button {    /*alle knoppen in de main*/
+  background-color: #FFBC0F;
+  color: black;
+  padding: 1em 2em;
+  border: none;
+  border-radius: 5em;
 }
 
 main section:nth-of-type(3) {
@@ -73,6 +80,8 @@ main section:nth-of-type(4) img {
 }
 
 
+
+/*navigatie balk*/
 nav {
   position: fixed;
   left: 0;
@@ -85,7 +94,7 @@ nav {
   padding: 2em;
 }
 
-/* hamburgermenu open open */
+/* hamburgermenu open */
 nav.is-open {
   translate: 0; /* in beeld */
 }
@@ -103,6 +112,9 @@ nav li a {
   color: var(--color-text);
   font-size: 1.2em;
 }
+
+
+
 
 /* footer styling */
 footer {
