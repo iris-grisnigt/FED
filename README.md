@@ -113,20 +113,22 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Student 2 - Nur
   - hamburger menu goed krijgen
   - meer uitleg over css map met ::roots
-  
+
   Student 3 - Luuk
-  - 
-  Student 2 - Toria
-  - 
+  - flexbox
+  - justify content toepassen
+  - werken met background img
+
+  Student 4 - Toria
+  - was er niet
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - punt 1 - lang="eng" voor woorden in het engels in bijv h1
+  - punt 2 - .visually-hidden om tekst te hebben die niet gezien hoeft te worden
+  - punt 3 - dark mode
 
 </details>
 
@@ -146,12 +148,19 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  Student 1 - Iris
+  - menu helemaal laten uitklappen naar beneden
+  - sectie goed krijgen
 
+  Student 2 - Nur
+  - hoe ik de 2de menu het beste kan coderen
+  - hoe ik borders korter kan maken
+
+  Student 3 - Luuk
+  - 
+
+  Student 4 - Toria
+  -
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
@@ -193,11 +202,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+
+
+
 
 
   ### Verslag van meeting

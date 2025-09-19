@@ -12,6 +12,7 @@
   --color-text: #000000;
   --color-background: #ffffff;
   --color-footer-background: #2A5729;
+  --color-header-background: #ffffff;
   --color-footer-text: #ffffff;
 }
 
@@ -24,7 +25,6 @@
 /****************/
 
 p {
-  font-family: 'Roboto', sans-serif;
   line-height: 1.6;
 }
 
@@ -32,28 +32,95 @@ h1 {
 	margin-bottom: 0.75em;
 }
 
+a {
+	color: #002f87;
+}
+
+body {
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+img {
+  max-width: 100%;  /* nooit breder dan container */
+}
+
 header {
+  position: sticky;  /* header blijft zichtbaar bij scrollen */
+  top: 0;            /* plakt aan de bovenkant van het scherm */
   background-color: var(--color-background);
   padding: 1.5em;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-img {
-  max-width: 100%;  /* nooit breder dan container */
-  height: auto;     /* verhouding blijft */
-  display: block;   /* voorkomt kleine witruimtes onder afbeeldingen */
-}
-
-header > button { /*de button in de header (hamburgermenu knop) */
-  margin-left: auto;
-  background: none;
-  border: none;
+  z-index: 1000;
 }
 
 header img {
-  height: 3.5em;
+  width: 9em;
+}
+
+
+
+
+header button {
+	font-size:1rem;
+
+	width: 3em;
+	aspect-ratio:1;
+	
+	margin: 0;
+	padding: 0;
+
+	border: none;
+	background: none;
+
+	display: grid;
+
+	align-items: center;
+	justify-items: center;
+
+	position: relative;
+  	z-index: 9999; /* boven de nav */
+}
+
+button span {
+	display: block;
+	width: 1.5em;
+	height: .2em;
+	background-color: black;
+
+	border-radius: .1em;
+
+	grid-row-start: 1;
+	grid-column-start: 1;
+
+	transition: .5s;
+}
+
+/*hamburger streepjes*/
+button span:nth-of-type(1) {
+	translate:0 -0.5em;
+}
+
+button span:nth-of-type(3) {
+	translate:0 0.5em;
+}
+
+
+/*kruisje*/
+button.is-open span:nth-of-type(1) {
+	rotate:45deg;
+	translate:0;
+}
+
+button.is-open span:nth-of-type(2) {
+	scale: 0 1;
+}
+
+button.is-open span:nth-of-type(3) {
+	rotate:-45deg;
+	translate:0;
 }
 
 
@@ -68,12 +135,28 @@ main button {    /*alle knoppen in de main*/
   border-radius: 5em;
 }
 
+/*eerste section*/
+main section:nth-of-type(1) {
+	padding: 24px;
+}
+
+/*tweede section*/
+main section:nth-of-type(2) {
+	margin: 48px 0px 8px;
+	padding: 0 1em;
+}
+
+main section:nth-of-type(2) img {
+	border-radius: 1em;
+}
+
+/*derde sectie */
 main section:nth-of-type(3) {
 	background-color: #201360;
 	color: white;
 }
 
-/*plaatjes bij topverhalen*/
+/*plaatjes bij topverhalen vierde section*/
 main section:nth-of-type(4) img {
 	height: 10em;
 	border-radius: 1em;
@@ -81,31 +164,83 @@ main section:nth-of-type(4) img {
 
 
 
+/* selecteer de vierde section in main */
+main section:nth-of-type(4) {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* artikelen binnen die section */
+main section:nth-of-type(4) article {
+  flex: 1 1 30%;
+  padding: 1em;
+}
+
+/*de vijfde section*/
+main section:nth-of-type(5) {
+	background-color: #C4E7F3;
+	padding: 40px 24px 144px;
+}
+
+main section:nth-of-type(5) h2 {
+	margin: 1.5em 0;
+}
+
+main section:nth-of-type(5) img {
+	height: 3em;
+}
+
+main section:nth-of-type(5) article > img {
+	display: flex;
+	flex-direction: row;
+	gap: 1em;
+}
+
+
+
+/*cookie instellingen knop*/
+body > button:last-of-type {
+	color: #001e80;
+	background-color: #76DDF5;
+	border: 1px solid white;
+	padding: 8px 16px;
+	position: fixed;
+	bottom: 0;
+}
+
+
+
+
 /*navigatie balk*/
+
+/* standaard buiten beeld (bovenkant) */
 nav {
-  position: fixed;
+  position: absolute; /* onder de header */
   left: 0;
   right: 0;
-  top: 0;
-  bottom: 0;
-  background: var(--color-background);
-  translate: 100%; /* standaard buiten beeld */
-  transition: translate 0.5s ease;
-  padding: 2em;
+  top: 100%; /* net onder de header */
+  background-color: var(--color-background);
+  overflow: hidden;
+  max-height: 0; /* menu is dicht */
+  transition: max-height 0.5s ease;
+  padding: 0 2em;
+  z-index: 999;
 }
 
-/* hamburgermenu open */
+/* nav open */
 nav.is-open {
-  translate: 0; /* in beeld */
+  max-height: 500px; /* hoog genoeg voor alle links */
 }
 
+/* menu-items */
 nav ul {
   list-style: none;
+  margin: 1em 0;
   padding: 0;
-  margin: 0 0 2em 0;
   display: flex;
   flex-direction: column;
-  gap: 1.5em;
+  gap: 1em;
 }
 
 nav li a {
@@ -120,31 +255,79 @@ nav li a {
 footer {
   background-color: var(--color-footer-background);
   color: var(--color-footer-text);
-  padding: 2em;
-  text-align: center;
+  padding: 84px 24px 160px;
+}
+
+form button {
+  background-color: #FFBC0F;
+  color: black;
+  margin: 0px 0px 0px -1px;
+  padding: 0 0 8px;
+  border: none;
+  border-radius: 5em;
+}
+
+footer h2 {
+  text-align: left;
+  margin: 0px 0px 4px;
+}
+
+footer ul {
+	list-style-type: none;
+	padding-inline-start: 0em;
+	margin: 0 0 2.5em 0;
+}
+
+footer a {
+	color: white;
+	text-decoration: none;
+	padding: 4px 0px;
+}
+
+footer p {
+  text-align: left;
+}
+
+footer section:first-of-type {
+	padding: 0px;
+	margin: 0px 0px 40px;
 }
 
 
+/* lijst met social media iconen*/
+footer section:nth-of-type(3) ul {
+	display: flex;
+	flex-direction: row;
+	gap: 2em;
+}
+
+footer section:nth-of-type(3) svg {
+	width: 3em;
+}
 
 
 /****************************************************************/
 /* styling voor de header als de browser minimaal 38em breed is */
 /****************************************************************/
-@media (min-width: 38em) {
 
+
+
+@media (min-width: 38em) {
   nav {
-    position: static; /* menu terug in de header */
-    translate: 0;     /* altijd zichtbaar */
-    background: none;
+    position: static;     /* in de header */
+    max-height: none;     /* altijd zichtbaar */
+    overflow: visible;    /* laat alles zien */
     padding: 0;
+    background: none;
+    transition: none;     /* animatie uitschakelen */
   }
 
-  nav button {
-    display: none;   /* kruisje verbergen */
+  header button {
+    display: none;        /* hamburger verbergen */
   }
 
   nav ul {
-    flex-direction: row; /* horizontaal */
+    flex-direction: row;  /* naast elkaar */
     gap: 2em;
     margin: 0;
   }
@@ -155,3 +338,4 @@ footer {
     font-size: 1em;
   }
 }
+
