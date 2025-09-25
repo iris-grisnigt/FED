@@ -58,6 +58,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
+  - contrast bij hoveren over buttons en links is te laag waardoor het niet goed zichtbaar is
+  - submit button is handig om toe te voegen bij zoekbalk in de navigatie --> mist nu
+  - bij kiezen van taal staat er nu alleen een pijltje --> doen: label toevoegen bij input veld
+  - kopstructuur niet altijd logisch 
 
 </details>
 
@@ -151,16 +155,19 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Student 1 - Iris
   - menu helemaal laten uitklappen naar beneden
   - sectie goed krijgen
+  - hoe krijg ik het font van de website?
 
   Student 2 - Nur
   - hoe ik de 2de menu het beste kan coderen
   - hoe ik borders korter kan maken
 
   Student 3 - Luuk
-  - 
+  - Design in pagina krijgen zonder img gebruiken
+  - drop down menu’s + animatie
 
   Student 4 - Toria
-  -
+  - hoe footer met ul/li
+  - header goed krijgen
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
@@ -255,8 +262,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
-  2. bron 2
+  1. bron 1: https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Responsive_images via studentassistent om plaatje te veranderen bij responsive
+  2. bron 2: https://stackoverflow.com/questions/63902512/js-show-hide-header-on-scroll-effect-but-only-after-the-header-has-scrolled header vervaagt weg bij scrollen
   3. ...
 
 </details>

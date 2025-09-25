@@ -1,0 +1,14 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*, *::after, *::before {
+  box-sizing: border-box;  
+}
+
+/***************************************************/
+/* TWEEDE PAGINA ACTIVISME CSS STYLING VAN DE MAIN */
+/***************************************************/
+
+main section:nth-of-type(1) { /*blijft t zelfde op beide paginas*/
+	padding: 2em;
+}

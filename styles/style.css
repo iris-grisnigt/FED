@@ -5,6 +5,8 @@
   box-sizing: border-box;  
 }
 
+
+
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
@@ -14,9 +16,35 @@
   --color-footer-background: #2A5729;
   --color-header-background: #ffffff;
   --color-footer-text: #ffffff;
+  --color-section1footer-background: #C4E7F3;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text: #ffffff;
+    --color-background: #000000;
+    --color-footer-background: #1a3d1a;
+    --color-header-background: #000000;
+    --color-footer-text: #cccccc;
+  }
+}
 
+/*********/
+/* FONTS */
+/*********/
+@font-face {
+  font-family: "Chunk-Rethunk";
+  src: url("../fonts/chunk-rethunk.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Proxima-Nova";
+  src: url("../fonts/proxima-nova.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
 
 
 
@@ -24,12 +52,22 @@
 /* JOUW STYLING */
 /****************/
 
-p {
+p, a {
   line-height: 1.6;
+  font-family: "Proxima-Nova";
+}
+
+h1, h2, h3 {
+	font-family: "Chunk-Rethunk";
 }
 
 h1 {
-	margin-bottom: 0.75em;
+	font-size: 2rem;
+	margin: 0;
+}
+
+h3 {
+    font-size: 1rem;
 }
 
 a {
@@ -38,32 +76,84 @@ a {
 
 body {
 	margin: 0;
-	font-family: 'Roboto', sans-serif;
+	background-color: var(--color-background);
+    color: var(--color-text);
 }
 
 img {
   max-width: 100%;  /* nooit breder dan container */
 }
 
+button {
+	cursor: pointer;
+	font-family: "Proxima-Nova";
+}
+
+main button {  /*alle knoppen in de main*/
+  background-color: #FFBC0F;
+  color: black;
+  padding: 1em 2em;
+  border: none;
+  border-radius: 5em;
+}
+
+main picture {
+  margin-top: 5em; /*ruimte aan de bovenkant omdat de header anders over de main hangt*/
+  display: block; /* voorkomt witruimte onder inline images */
+}
+
+
+form button {
+  background-color: #FFBC0F;
+  color: black;
+  padding: 1em;
+  border: none;
+  border-radius: 1em;
+}
+
+input {
+	width: 14em;
+	padding: 1em;
+	border-radius: 1em;
+}
+
+footer input {
+	border: none;
+}
+
+select {
+  padding: 0.3em;
+  border-radius: 0.5em;
+}
+
+
+/**********/
+/* HEADER */
+/**********/
+
+
 header {
-  position: sticky;  /* header blijft zichtbaar bij scrollen */
-  top: 0;            /* plakt aan de bovenkant van het scherm */
-  background-color: var(--color-background);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+
+  background-color: var(--color-header-background);
   padding: 1.5em;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 1000;
+
 }
 
 header img {
   width: 9em;
 }
 
-
-
-
-header button {
+header > button {
 	font-size:1rem;
 
 	width: 3em;
@@ -88,7 +178,7 @@ button span {
 	display: block;
 	width: 1.5em;
 	height: .2em;
-	background-color: black;
+	background-color: var(--color-text);
 
 	border-radius: .1em;
 
@@ -98,7 +188,7 @@ button span {
 	transition: .5s;
 }
 
-/*hamburger streepjes*/
+/*hamburger streepjes positie*/
 button span:nth-of-type(1) {
 	translate:0 -0.5em;
 }
@@ -124,95 +214,9 @@ button.is-open span:nth-of-type(3) {
 }
 
 
-
-
-/* main */
-main button {    /*alle knoppen in de main*/
-  background-color: #FFBC0F;
-  color: black;
-  padding: 1em 2em;
-  border: none;
-  border-radius: 5em;
-}
-
-/*eerste section*/
-main section:nth-of-type(1) {
-	padding: 24px;
-}
-
-/*tweede section*/
-main section:nth-of-type(2) {
-	margin: 48px 0px 8px;
-	padding: 0 1em;
-}
-
-main section:nth-of-type(2) img {
-	border-radius: 1em;
-}
-
-/*derde sectie */
-main section:nth-of-type(3) {
-	background-color: #201360;
-	color: white;
-}
-
-/*plaatjes bij topverhalen vierde section*/
-main section:nth-of-type(4) img {
-	height: 10em;
-	border-radius: 1em;
-}
-
-
-
-/* selecteer de vierde section in main */
-main section:nth-of-type(4) {
-  display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
-
-/* artikelen binnen die section */
-main section:nth-of-type(4) article {
-  flex: 1 1 30%;
-  padding: 1em;
-}
-
-/*de vijfde section*/
-main section:nth-of-type(5) {
-	background-color: #C4E7F3;
-	padding: 40px 24px 144px;
-}
-
-main section:nth-of-type(5) h2 {
-	margin: 1.5em 0;
-}
-
-main section:nth-of-type(5) img {
-	height: 3em;
-}
-
-main section:nth-of-type(5) article > img {
-	display: flex;
-	flex-direction: row;
-	gap: 1em;
-}
-
-
-
-/*cookie instellingen knop*/
-body > button:last-of-type {
-	color: #001e80;
-	background-color: #76DDF5;
-	border: 1px solid white;
-	padding: 8px 16px;
-	position: fixed;
-	bottom: 0;
-}
-
-
-
-
-/*navigatie balk*/
+/*************/
+/* NAVIGATIE */
+/*************/
 
 /* standaard buiten beeld (bovenkant) */
 nav {
@@ -222,7 +226,8 @@ nav {
   top: 100%; /* net onder de header */
   background-color: var(--color-background);
   overflow: hidden;
-  max-height: 0; /* menu is dicht */
+  height: 100vh; /* menu is dicht */
+  translate: 0 100%;
   transition: max-height 0.5s ease;
   padding: 0 2em;
   z-index: 999;
@@ -230,7 +235,7 @@ nav {
 
 /* nav open */
 nav.is-open {
-  max-height: 500px; /* hoog genoeg voor alle links */
+  translate: 0 0; /* hoog genoeg voor alle links */
 }
 
 /* menu-items */
@@ -245,85 +250,170 @@ nav ul {
 
 nav li a {
   color: var(--color-text);
+  text-decoration: none;
   font-size: 1.2em;
+  /* font-family: "Chunk-Rethunk";*/
+}
+
+details > summary {
+	font-family: "Chunk-Rethunk";
+
 }
 
 
 
+
+/*cookie instellingen knop*/
+body > button:last-of-type {
+	color: #001e80;
+	background-color: #76DDF5;
+	border: 1px solid white;
+	padding: 8px 16px;
+	position: fixed;
+	bottom: 0;
+}
+
+/**********/
+/* FOOTER */
+/**********/
 
 /* footer styling */
 footer {
   background-color: var(--color-footer-background);
-  color: var(--color-footer-text);
-  padding: 84px 24px 160px;
+  position: relative;
 }
 
-form button {
-  background-color: #FFBC0F;
-  color: black;
-  margin: 0px 0px 0px -1px;
-  padding: 0 0 8px;
-  border: none;
-  border-radius: 5em;
+footer > img {
+	position: absolute;
+	right: 3.5em;
+
+    transform: translateY(-80%);
 }
 
 footer h2 {
   text-align: left;
-  margin: 0px 0px 4px;
+  color: white;
+  font-size: 1rem;
 }
 
 footer ul {
 	list-style-type: none;
 	padding-inline-start: 0em;
-	margin: 0 0 2.5em 0;
+	margin: 0 0 .5rem;
 }
 
 footer a {
 	color: white;
-	text-decoration: none;
-	padding: 4px 0px;
+	padding: .5em 0;
 }
 
 footer p {
   text-align: left;
 }
 
-footer section:first-of-type {
-	padding: 0px;
-	margin: 0px 0px 40px;
+footer section {
+	padding: 0 1.5em 2em;
+}
+
+/* eerste section (groot)*/
+footer section:nth-of-type(1) {
+	background-color: var(--color-section1footer-background);
+	color: black; /* blijft altijd zwart, ook in dark mode*/
+	padding: 4em 2em 10em;
+}
+
+footer section:nth-of-type(1) a {
+	color: #002f87;
+}
+
+footer section:nth-of-type(1) h2 {
+	color: black;
+	font-size: 1.5rem;
+
+}
+
+footer section:nth-of-type(1) h3 {
+	font-size: 1rem;
+}
+
+footer section:nth-of-type(1) article {
+  display: grid;
+  grid-template-columns: auto 1fr; /* icoon links, tekst rechts */
+  gap: 1em;
+  align-items: start;
+  padding-bottom: 3.5em;
+}
+
+footer section:nth-of-type(1) article img {
+  width: 3em;
+  height: auto;
+  grid-row: 1 / span 3; /* laat het icoon de hoogte van alle regels vullen */
+}
+
+footer section:nth-of-type(1) article h3, article p, article a {
+  margin: 0; /* zorgt dat de spacing strak blijft */
 }
 
 
+/* andere sections */
+
+footer section:nth-of-type(2) {
+	color: var(--color-footer-text);
+}
+
 /* lijst met social media iconen*/
-footer section:nth-of-type(3) ul {
+footer section:nth-of-type(4) ul {
 	display: flex;
 	flex-direction: row;
 	gap: 2em;
 }
 
-footer section:nth-of-type(3) svg {
+footer section:nth-of-type(4) svg {
 	width: 3em;
 }
+
+footer ul li a {
+	text-decoration: none;
+}
+
+/*****************/
+/* BUTTON STATES */
+/*****************/
+
+
+
+main button:hover {
+	background-color: #FFE059; 
+	transition: background-color .15s ease-in-out;
+}
+
+nav a:hover {
+	text-decoration: underline;
+	color: #001e80;
+}
+
+footer a:hover {
+	text-decoration: underline;
+	color: yellow;
+}
+
+
 
 
 /****************************************************************/
 /* styling voor de header als de browser minimaal 38em breed is */
 /****************************************************************/
 
-
+/*navigatie*/
 
 @media (min-width: 38em) {
   nav {
     position: static;     /* in de header */
-    max-height: none;     /* altijd zichtbaar */
+    height: 0;     /* altijd zichtbaar */
     overflow: visible;    /* laat alles zien */
     padding: 0;
     background: none;
     transition: none;     /* animatie uitschakelen */
-  }
-
-  header button {
-    display: none;        /* hamburger verbergen */
   }
 
   nav ul {
@@ -339,3 +429,37 @@ footer section:nth-of-type(3) svg {
   }
 }
 
+/****************************************************************/
+/* styling voor de footer als de browser minimaal 38em breed is */
+/****************************************************************/
+
+
+@media (min-width: 38em) {
+  /* Kolommen naast elkaar */
+  footer section:nth-of-type(2),
+  footer section:nth-of-type(3),
+  footer section:nth-of-type(4),
+  footer section:nth-of-type(5) {
+    display: inline-block;
+    vertical-align: top;
+    width: 24%; /* 4 kolommen van 24% en nog wat ruimte voor padding */
+    padding: 2em 1em;
+  }
+
+  footer section:nth-of-type(6) {
+    display: block;
+    width: 100%;
+    padding: 2em 1em 10em;
+    text-align: center;
+  }
+
+  footer section:nth-of-type(6) ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    padding: 0;
+    margin: 0;
+  }
+
+}

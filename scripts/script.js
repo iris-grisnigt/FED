@@ -46,14 +46,34 @@ function toggleMenu() {
 }
 */
 
-let menuButton = document.querySelector("header button");
+let menuButton = document.querySelector("header > button");
 
-let navMenu = document.querySelector("nav");
+let navMenu = document.querySelector("header nav");
 
 menuButton.addEventListener("click", toggleMenu);
 
 function toggleMenu() {
     menuButton.classList.toggle("is-open");
     navMenu.classList.toggle("is-open"); // dit opent/sluit het menu
+    console.log('hiii')
 }
 
+
+
+
+let vorigeScroll = window.scrollY; //verticale scroll
+let header = document.querySelector("header");
+
+window.addEventListener("scroll", () => {
+  let huidigeScroll = window.scrollY;
+
+  if (huidigeScroll > vorigeScroll) { 
+    // naar beneden scrollen -> header vervaagt weg
+    header.style.opacity = "0";
+  } else {
+    // naar boven scrollen -> header komt terug
+    header.style.opacity = "1";
+  }
+
+  vorigeScroll = huidigeScroll;
+});
