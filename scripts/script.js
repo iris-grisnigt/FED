@@ -48,6 +48,8 @@ function toggleMenu() {
 
 let menuButton = document.querySelector("header > button");
 
+const body = document.querySelector("body"); //studentassistent hulp
+
 let navMenu = document.querySelector("header nav");
 
 menuButton.addEventListener("click", toggleMenu);
@@ -55,11 +57,12 @@ menuButton.addEventListener("click", toggleMenu);
 function toggleMenu() {
     menuButton.classList.toggle("is-open");
     navMenu.classList.toggle("is-open"); // dit opent/sluit het menu
-    console.log('hiii')
+    body.classList.toggle("remove-scrolling"); // studentassisent hulp
 }
 
 
 
+//bron 2: https://stackoverflow.com/questions/63902512/js-show-hide-header-on-scroll-effect-but-only-after-the-header-has-scrolled
 
 let vorigeScroll = window.scrollY; //verticale scroll
 let header = document.querySelector("header");

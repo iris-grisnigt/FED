@@ -80,6 +80,10 @@ body {
     color: var(--color-text);
 }
 
+body.remove-scrolling{
+	overflow: hidden; /*blokkeert het scrollen als menu is geopeond (studentassistent hulp)*/
+}
+
 img {
   max-width: 100%;  /* nooit breder dan container */
 }
@@ -239,8 +243,9 @@ nav.is-open {
 }
 
 /* menu-items */
+
 nav ul {
-  list-style: none;
+  list-style-type: none;
   margin: 1em 0;
   padding: 0;
   display: flex;
@@ -252,15 +257,23 @@ nav li a {
   color: var(--color-text);
   text-decoration: none;
   font-size: 1.2em;
-  /* font-family: "Chunk-Rethunk";*/
+  font-family: "Chunk-Rethunk";
 }
 
-details > summary {
-	font-family: "Chunk-Rethunk";
+/* poging styling van summary details
 
+nav summary,
+nav > ul > li > a {
+  font-family: "Chunk-Rethunk";
+  cursor: pointer;
+  text-decoration: none;
 }
 
-
+details li {
+	text-decoration: none;
+	font-family: "Proxima-Nova";
+} 
+*/
 
 
 /*cookie instellingen knop*/
@@ -355,13 +368,13 @@ footer section:nth-of-type(1) article h3, article p, article a {
 }
 
 
-/* andere sections */
+/* andere sections vanaf 2 */
 
 footer section:nth-of-type(2) {
 	color: var(--color-footer-text);
 }
 
-/* lijst met social media iconen*/
+/* lijst met social media iconen section 4*/
 footer section:nth-of-type(4) ul {
 	display: flex;
 	flex-direction: row;
@@ -376,11 +389,19 @@ footer ul li a {
 	text-decoration: none;
 }
 
+/*cookie instellingen knop*/
+body > button:last-of-type {
+	color: #001e80;
+	background-color: #76DDF5;
+	border: 1px solid white;
+	padding: 8px 16px;
+	position: fixed;
+	bottom: 0;
+}
+
 /*****************/
 /* BUTTON STATES */
 /*****************/
-
-
 
 main button:hover {
 	background-color: #FFE059; 
@@ -429,10 +450,20 @@ footer a:hover {
   }
 }
 
+@media (min-width: 38em) {
+  nav ul li:nth-last-child(1),  /* neem contact met ons op  link in de nav */
+  nav ul li:nth-last-child(2),  /* nieuws link in de nav */
+  
+  header form {                 /* zoekbalk in de nav */
+    display: none;
+  }
+}
+
+
+
 /****************************************************************/
 /* styling voor de footer als de browser minimaal 38em breed is */
 /****************************************************************/
-
 
 @media (min-width: 38em) {
   /* Kolommen naast elkaar */
@@ -461,5 +492,4 @@ footer a:hover {
     padding: 0;
     margin: 0;
   }
-
 }
