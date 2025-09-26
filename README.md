@@ -209,7 +209,20 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
+  Student 1 - Iris
+  - menu klapt niet uit bij groot scherm
+  - tekst op afbeelding krijgen bij groot scherm
 
+  Student 2 - Nur
+  - hoe zet je pauze knopje bij een video
+  - svgtjes gaan op mijn hamburger menu
+  - hoe krijg ik footer responsive
+
+  Student 3 - Luuk
+  - 
+
+  Student 4 - Toria
+  - 
 
 
 
