@@ -62,6 +62,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   - submit button is handig om toe te voegen bij zoekbalk in de navigatie --> mist nu
   - bij kiezen van taal staat er nu alleen een pijltje --> doen: label toevoegen bij input veld
   - kopstructuur niet altijd logisch 
+  - hamburgermenu klopt niet bij wisselen van klein naar groot scherm
 
 </details>
 
@@ -210,8 +211,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   samen met je groepje opstellen
 
   Student 1 - Iris
-  - menu klapt niet uit bij groot scherm
-  - tekst op afbeelding krijgen bij groot scherm
+  - menu klapt niet uit bij groot scherm -> fout van de website met javacript (dus is al verbeterd) nu alleen de knop weghalen bij groot scherm in de media query
+  - tekst op afbeelding krijgen bij groot scherm > div gebruken
+  - ruimte om plaatje wegkrijgen - background image van maken
 
   Student 2 - Nur
   - hoe zet je pauze knopje bij een video
@@ -219,10 +221,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   - hoe krijg ik footer responsive
 
   Student 3 - Luuk
-  - 
+  - -Border-box problemen
+  - Clickbare backgroundimages
 
   Student 4 - Toria
-  - 
+  - Video op github
+  - Footer wit vlak
+  - Pauze knop
 
 
 
@@ -230,8 +235,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
+  - punt 1 - div gebruiken voor background img
+  - punt 2 - background img maken van de img om de padding te vullen
   - nog een punt
   - ...
 
@@ -277,6 +282,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   1. bron 1: https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Responsive_images via studentassistent om plaatje te veranderen bij responsive
   2. bron 2: https://stackoverflow.com/questions/63902512/js-show-hide-header-on-scroll-effect-but-only-after-the-header-has-scrolled header vervaagt weg bij scrollen
-  3. ...
+  3. https://webtalis.nl/embed-youtube-video-wordpress/ youtube video in html krijgen
+  4. https://www.a11yproject.com/posts/how-to-hide-content/ heading weghalen van de website maar wel zichtbaar voor screenreader
 
 </details>

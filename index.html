@@ -16,7 +16,7 @@
 
 <body>
 	<header>
-		<img src="images/logo.png" alt="ben&jerrylogo">
+		<a href="index.html"><img src="images/logo.png" alt="ben&jerrylogo"></a>
 		<nav>
 			<form>
 				<input type="search" id="search" name="search" placeholder="Search Our Website" required>
@@ -25,7 +25,7 @@
 			<ul>
 				<li><a href="#">Smaken</a></li>
 				<li><a href="#">Verkooppunten</a></li>
-				<li><a href="#">Activisme</a></li>
+				<li><a href="activisme.html">Activisme</a></li>
 				<li><a href="#">Over Ben & Jerry's</a></li>
 				<li><a href="#">Nieuwtjes</a></li>
 				<li><a href="#">Neem contact met ons op</a></li>
@@ -86,16 +86,19 @@
 	</header>
 
 	<main>
-		<picture>
-			<source media="(width >= 800px)" srcset="images/bohemian-raspberry-desktop.png" />
-			<img src="images/bohemian-raspberry.png" alt="ijssmaak afbeelding mobiel formaat" />
-		</picture>
-		<section>
-			<h1>Bohemian Raspberry</h1>
-			<p>Laat je smaakpapillen rocken met de terugkeer van de zoete eerbetoon aan muziekroyalty Queen, ter
-				gelegenheid van de 50e verjaardag van hun legendarische nummer, "Bohemian Rhapsody"!</p>
-			<button>Lees Meer</button>
-		</section>
+		<!-- <div> -->
+			<picture>
+				<source media="(width >= 800px)" srcset="images/bohemian-raspberry-desktop.png">
+				<img src="images/bohemian-raspberry.png" alt="ijssmaak afbeelding mobiel formaat">
+			</picture>
+	
+			<section>
+				<h1>Bohemian Raspberry</h1>
+				<p>Laat je smaakpapillen rocken met de terugkeer van de zoete eerbetoon aan muziekroyalty Queen, ter
+					gelegenheid van de 50e verjaardag van hun legendarische nummer, "Bohemian Rhapsody"!</p>
+				<button>Lees Meer</button>
+			</section>
+		<!-- </div> -->
 
 		<section>
 			<h2>Verkooppunten</h2>
@@ -181,7 +184,7 @@
 		<img src="images/footer_koe.svg" alt="koe met een megafoon">
 
 		<section>
-			<h2>Meld je aan voor onze nieuwsbrief!</h3>
+			<h2>Meld je aan voor onze nieuwsbrief!</h2>
 				<p>Wij zorgen ervoor dat je als eerste op de hoogte bent van nieuwe smaken,
 					fun activiteiten en sociale initiatieven van Ben & Jerry's! Get the scoop!</p>
 				<form>
@@ -189,13 +192,15 @@
 					<button type="submit">></button>
 				</form>
 		</section>
+
 		<section>
 			<h2>Blijf op de hoogte</h2>
 			<ul>
 				<li><a href="#">Stuur ons feedback</a></li>
-				<li><a href="#" lang="eng">Unsubscribe</a></li>
+				<li><a href="#">Unsubscribe</a></li>
 			</ul>
 		</section>
+
 		<section>
 			<h2>Volg ons!</h2>
 			<ul>
@@ -243,6 +248,7 @@
 					</a></li>
 			</ul>
 		</section>
+
 		<section>
 			<h2>Meer informatie</h2>
 			<ul>
@@ -251,9 +257,10 @@
 				<li><a href="#">Hoe wij zaken doen</a></li>
 			</ul>
 		</section>
+
 		<section>
 			<ul>
-				<li> <!--verbetering: het is duidelijker dan allee pijltje-->
+				<li> <!--verbetering: het is duidelijker dan alleen pijltje-->
 					<label for="language" aria-label="Nederlandse vlag"><img src="images/vlagNL.png" alt=""></label>
 					<select id="language" name="language">
 						<option value="nl">Nederlands</option>

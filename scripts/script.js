@@ -46,6 +46,8 @@ function toggleMenu() {
 }
 */
 
+
+//in de les gedaan
 let menuButton = document.querySelector("header > button");
 
 const body = document.querySelector("body"); //studentassistent hulp

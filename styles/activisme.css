@@ -9,6 +9,190 @@
 /* TWEEDE PAGINA ACTIVISME CSS STYLING VAN DE MAIN */
 /***************************************************/
 
-main section:nth-of-type(1) { /*blijft t zelfde op beide paginas*/
-	padding: 2em;
+/* algemeen */
+main section ul {
+  padding: 0;
+}
+
+main img {
+  border-radius: 1em;
+}
+
+main article {
+  padding-bottom: 3em;
+}
+
+/* bron: a11y project */
+.visually-hidden { 
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+
+
+/* eerste section */
+/* div container met picture en section) */
+main > div:first-of-type {
+  position: relative; 
+}
+
+main > div:first-of-type picture img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0;
+}
+
+main > div:first-of-type section {
+  position: static; 
+  padding: 1.5em;
+}
+
+
+/* tweede en vierde section: */
+main > section:nth-of-type(1),
+main > section:nth-of-type(3) {
+  background-color: #EDF8FB;
+  padding: 1em;
+}
+
+/* derde section (alleen een knop) */
+main section:nth-of-type(2) {
+  padding: 2em 0;
+  margin: 1.5em 0;
+  text-align: center;
+}
+
+/* vijfde section met de video */
+main section:nth-of-type(4) {
+  padding: 1em;
+}
+
+main section:nth-of-type(4) iframe {
+  width: 100%;
+  aspect-ratio: 13 / 9;
+  height: auto;
+  border: 0;
+  padding: 1.5em;
+}
+
+/* zesde section (laatste section) */
+main section:nth-of-type(5) {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1em;
+}
+
+
+
+/***********************************************************/
+/* styling als de browser minimaal 38em breed is (DESKTOP) */
+/***********************************************************/
+
+/********************************/
+/* STYLING DIV + EERSTE SECTION */
+/********************************/
+@media (min-width: 38em) {
+  /* dit inhoud van de section (p en de h1 hierboven) op de afbeelding */
+  main > div:first-of-type section {
+    position: absolute;
+    top: 50%; 
+    left: 5%;
+    transform: translateY(-50%); /* alleen verticaal centreren */
+    color: black;
+    max-width: 40%;
+    padding: 0;
+  }
+}
+
+
+/**************************/
+/* STYLING TWEEDE SECTION */
+/**************************/
+@media (min-width: 38em) {
+  main section:nth-of-type(1) ul {
+    display: flex;
+    gap: 2em;
+    justify-content: space-between;
+  }
+
+  section ul li {
+    flex: 1; /* li hebben gelijke breedte*/
+  }
+}
+
+/********************************/
+/* DERDE SECTION GROTERE BUTTON */
+/********************************/
+@media (min-width: 38em) {
+  main section:nth-of-type(2) button {
+    font-size: 1.2rem;
+    min-width: 15em;
+  }
+}
+
+/**************************/
+/* STYLING VIERDE SECTION */
+/**************************/
+@media (min-width: 38em) {
+  main section:nth-of-type(3) ul {
+    display: flex;
+    gap: 2em;
+    justify-content: space-between;
+  }
+
+  section ul li {
+    flex: 1; /* li hebben gelijke breedte*/
+  }
+}
+
+/************************************/
+/* STYLING TWEEDE EN VIERDE SECTION */
+/************************************/
+@media (min-width: 38em) {
+   main section:nth-of-type(1),
+   main section:nth-of-type(3) {
+    padding: 3em;
+  }
+}
+
+
+/**************************/
+/* STYLING VIJFDE SECTION */
+/**************************/
+@media (min-width: 38em) {
+  main section:nth-of-type(4) iframe {
+    display: block;
+    margin: 0 auto;   /* horizontaal centreren */
+    max-width: 50%;
+    aspect-ratio: 16/9;
+  }
+}
+
+/***************************/
+/* STYLING LAATSTE SECTION */
+/***************************/
+
+@media (min-width: 38em) {
+  main section:last-of-type {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;   /* OVERSCHRIJFT de column */
+    gap: 2em;
+    align-items: flex-start;
+  }
+
+  main section:last-of-type > h2 {
+    flex: 0 0 100%;    /* h2 volle breedte */
+  }
+
+  main section:last-of-type > article {
+    flex: 1 1 0;       /* twee artikelen naast elkaar */
+  }
 }
