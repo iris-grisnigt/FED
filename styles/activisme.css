@@ -9,7 +9,7 @@
 /* TWEEDE PAGINA ACTIVISME CSS STYLING VAN DE MAIN */
 /***************************************************/
 
-/* algemeen */
+/* algemeen voor deze pagina*/
 main section ul {
   padding: 0;
 }
@@ -21,19 +21,6 @@ main img {
 main article {
   padding-bottom: 3em;
 }
-
-/* bron: a11y project */
-.visually-hidden { 
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-
-
 
 /* eerste section */
 /* div container met picture en section) */
@@ -57,7 +44,7 @@ main > div:first-of-type section {
 /* tweede en vierde section: */
 main > section:nth-of-type(1),
 main > section:nth-of-type(3) {
-  background-color: #EDF8FB;
+  background-color: var(--color-background-sections2); /* de lichtbaluwe kleur*/
   padding: 1em;
 }
 
@@ -75,14 +62,14 @@ main section:nth-of-type(4) {
 
 main section:nth-of-type(4) iframe {
   width: 100%;
-  aspect-ratio: 13 / 9;
+  aspect-ratio: 13 / 9; /*zorgt voor de verhouding */
   height: auto;
   border: 0;
   padding: 1.5em;
 }
 
 /* zesde section (laatste section) */
-main section:nth-of-type(5) {
+main section:last-of-type {
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -122,18 +109,19 @@ main section:nth-of-type(5) {
     justify-content: space-between;
   }
 
-  section ul li {
+  main section:nth-of-type(1) ul li {
     flex: 1; /* li hebben gelijke breedte*/
   }
 }
 
 /********************************/
-/* DERDE SECTION GROTERE BUTTON */
+/* DERDE EN LAATSTE SECTION GROTERE BUTTONS */
 /********************************/
 @media (min-width: 38em) {
-  main section:nth-of-type(2) button {
+  main section:nth-of-type(2) button,
+  main section:nth-of-type(5) button {
     font-size: 1.2rem;
-    min-width: 15em;
+    min-width: 14em;
   }
 }
 
@@ -147,7 +135,7 @@ main section:nth-of-type(5) {
     justify-content: space-between;
   }
 
-  section ul li {
+  main section:nth-of-type(3) ul li {
     flex: 1; /* li hebben gelijke breedte*/
   }
 }
@@ -183,7 +171,7 @@ main section:nth-of-type(5) {
   main section:last-of-type {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;   /* OVERSCHRIJFT de column */
+    flex-direction: row; 
     gap: 2em;
     align-items: flex-start;
   }
@@ -193,6 +181,10 @@ main section:nth-of-type(5) {
   }
 
   main section:last-of-type > article {
-    flex: 1 1 0;       /* twee artikelen naast elkaar */
+   flex: 1 1 0;       /* twee artikelen naast elkaar */
+  }
+
+  main section:last-of-type p {
+    padding-bottom: 2em; /* meer ruimte tussen de knop en tekst */
   }
 }

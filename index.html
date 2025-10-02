@@ -20,7 +20,7 @@
 		<nav>
 			<form>
 				<input type="search" id="search" name="search" placeholder="Search Our Website" required>
-				<button type="submit">></button>
+				<button type="submit" aria-label="Aanmelden voor de nieuwsbrief">></button>
 			</form>
 			<ul>
 				<li><a href="#">Smaken</a></li>
@@ -78,7 +78,7 @@
 				<li><a href="#">Neem contact met ons op</a></li>
 			</ul> -->
 		</nav>
-		<button aria-label="toggle menu">
+		<button aria-label="menu openen of sluiten">
 			<span></span>
 			<span></span>
 			<span></span>
@@ -86,14 +86,13 @@
 	</header>
 
 	<main>
-		<!-- <div> -->
-			<picture>
-				<source media="(width >= 800px)" srcset="images/bohemian-raspberry-desktop.png">
-				<img src="images/bohemian-raspberry.png" alt="ijssmaak afbeelding mobiel formaat">
-			</picture>
-	
+		<!-- <div class="hoofdafbeelding"> div om de tekst erop te krijgen -->
 			<section>
-				<h1>Bohemian Raspberry</h1>
+				<picture>
+					<source media="(width >= 800px)" srcset="images/bohemian-raspberry-desktop.png">
+					<img src="images/bohemian-raspberry.png" alt="ijssmaak afbeelding mobiel formaat">
+				</picture>
+				<h1 lang="en">Bohemian Raspberry</h1>
 				<p>Laat je smaakpapillen rocken met de terugkeer van de zoete eerbetoon aan muziekroyalty Queen, ter
 					gelegenheid van de 50e verjaardag van hun legendarische nummer, "Bohemian Rhapsody"!</p>
 				<button>Lees Meer</button>
@@ -111,9 +110,11 @@
 
 		<section>
 			<img src="images/wereldbol.png" alt="wereldbol">
-			<h2>Doe mee</h2>
-			<p>Wij spreken ons uit over onderwerpen die ons nauw aan het hart liggen. Ontdek hoe jij kan helpen. </p>
-			<button>Ontdek meer over onze waarden</button>
+			<article>
+				<h2>Doe mee</h2>
+				<p>Wij spreken ons uit over onderwerpen die ons nauw aan het hart liggen. Ontdek hoe jij kan helpen. </p>
+				<button>Ontdek meer over onze waarden</button>
+			</article>
 		</section>
 
 		<section>
@@ -121,34 +122,30 @@
 			<ul>
 				<li>
 					<article>
-						<img src="images/topverhalen1.png" alt="eerste foto">
+						<img src="images/topverhalen1.png" alt="ballonnen met een ijsbakje en een kaarsje">
 						<p>1 MEI 2025</p>
 						<h3 lang="en">QUIZ: Celebrate Our Birthday With 10 Trivia Questions</h3>
 						<p lang="en">Break out the balloons, it's our birthday! Here's a birthday challenge for you: Can
-							you
-							answer 10 trivia questions about your favorite ice cream makers? Give it a go!</p>
+							you answer 10 trivia questions about your favorite ice cream makers? Give it a go!</p>
 						<a href="#">Meer lezen</a>
 					</article>
 				</li>
-
 				<li>
 					<article>
-						<img src="images/topverhalen2.png" alt="tweede foto">
+						<img src="images/topverhalen2.png" alt="hulpverleners en een rechter">
 						<p>22 APRIL 2025</p>
 						<h3>Iemand helpen is toch geen misdrijf? Bescherm solidariteit in Europa!</h3>
 						<p>Europese politici willen hulp aan nieuwkomers bestraffen. Kom in actie!</p>
 						<a href="#">Meer lezen</a>
 					</article>
 				</li>
-
 				<li>
 					<article>
-						<img src="images/topverhalen3.png" alt="derde foto">
+						<img src="images/topverhalen3.png" alt="plant van ijskoekjes">
 						<p>11 APRIL 2025</p>
 						<h3 lang="en">Ice Cream Flower-wiches</h3>
 						<p lang="en">Spring is in the air! Celebrate the season with these customizable Ice Cream
-							Flower-wiches,
-							perfect for making and decorating with friends!</p>
+							Flower-wiches, perfect for making and decorating with friends!</p>
 						<a href="#">Meer lezen</a>
 					</article>
 				</li>
@@ -186,7 +183,7 @@
 		<section>
 			<h2>Meld je aan voor onze nieuwsbrief!</h2>
 				<p>Wij zorgen ervoor dat je als eerste op de hoogte bent van nieuwe smaken,
-					fun activiteiten en sociale initiatieven van Ben & Jerry's! Get the scoop!</p>
+					fun activiteiten en sociale initiatieven van Ben & Jerry's! <span lang="en">Get the scoop!</span></p>
 				<form>
 					<input type="email" id="email" name="email" placeholder="Voer je e-mail adres in" required>
 					<button type="submit">></button>
@@ -197,15 +194,15 @@
 			<h2>Blijf op de hoogte</h2>
 			<ul>
 				<li><a href="#">Stuur ons feedback</a></li>
-				<li><a href="#">Unsubscribe</a></li>
+				<li><a href="#" lang="en">Unsubscribe</a></li>
 			</ul>
 		</section>
 
 		<section>
 			<h2>Volg ons!</h2>
 			<ul>
-				<li><a href="https://www.facebook.com">
-						<svg xmlns="http://www.w3.org/2000/svg" alt="Facebook icoon" fill="#fff" x="0px" y="0px"
+				<li><a href="https://www.facebook.com" aria-label="Facebook">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="#fff" x="0px" y="0px"
 							viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
 							<circle fill="none" stroke="#fff" stroke-width="8" stroke-miterlimit="10" cx="50" cy="50"
 								r="42.5" />
@@ -214,8 +211,8 @@
 						</svg>
 					</a></li>
 
-				<li><a href="https://www.instagram.com">
-						<svg xmlns="http://www.w3.org/2000/svg" alt="Instagram icoon" fill="#fff" x="0px" y="0px"
+				<li><a href="https://www.instagram.com" aria-label="Instagam">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="#fff" x="0px" y="0px"
 							viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
 							<circle fill="none" stroke="#fff" stroke-width="8" stroke-miterlimit="10" cx="50" cy="50"
 								r="42.5" />
@@ -227,8 +224,8 @@
 						</svg>
 					</a></li>
 
-				<li><a href="https://www.Tiktok.com">
-						<svg xmlns="http://www.w3.org/2000/svg" alt="Tiktok icoon" fill="#fff" x="0px" y="0px"
+				<li><a href="https://www.Tiktok.com" aria-label="TikTok">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="#fff" x="0px" y="0px"
 							viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
 							<circle fill="none" stroke="#fff" stroke-width="8" stroke-miterlimit="10" cx="50" cy="50"
 								r="42.5" />
@@ -237,8 +234,8 @@
 						</svg>
 					</a></li>
 
-				<li><a href="https://www.X.com">
-						<svg xmlns="http://www.w3.org/2000/svg" alt="X icoon" fill="#fff" x="0px" y="0px"
+				<li><a href="https://www.X.com" aria-label="X">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="#fff" x="0px" y="0px"
 							viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
 							<circle fill="none" stroke="#fff" stroke-width="8" stroke-miterlimit="10" cx="50" cy="50"
 								r="42.5" />
@@ -259,9 +256,10 @@
 		</section>
 
 		<section>
+			<h2 class="visually-hidden">Hier vind je meer informatie over ons en de website</h2>
 			<ul>
 				<li> <!--verbetering: het is duidelijker dan alleen pijltje-->
-					<label for="language" aria-label="Nederlandse vlag"><img src="images/vlagNL.png" alt=""></label>
+					<label for="language"><img src="images/vlagNL.png" alt="Nederlandse vlag"></label>
 					<select id="language" name="language">
 						<option value="nl">Nederlands</option>
 						<option value="en">Engels</option>

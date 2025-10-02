@@ -44,7 +44,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <img src="readme-images/homepagina.png" width="375px" alt="homepagina">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  Onderwerpen die wij belangrijk vinden
+  Activisme (overzicht)
   <img src="readme-images/tweedepagina.png" width="375px" alt="tweede pagina">
  
 </details>
@@ -63,6 +63,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   - bij kiezen van taal staat er nu alleen een pijltje --> doen: label toevoegen bij input veld
   - kopstructuur niet altijd logisch 
   - hamburgermenu klopt niet bij wisselen van klein naar groot scherm
+  - dark mode mist in de website
 
 </details>
 
@@ -148,6 +149,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Dit ging goed: het lukte nu steeds beter om met de selectoren te werken (was eerst nog gepuzzlel met al die sections)
+  Dit was lastig: het menu deed nog niet helemaal wat ik wilde: hij klapt niet helemaal uit naar beneden en het lukt ook niet om een bepaalde section goed te krijgen met flexbox.
 
 
   ### Agenda voor meeting
@@ -173,8 +176,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
+  - punt 1 - font kan je heel makkelijk bij Network -> Fonts downloaden
+  - punt 2 - 
   - nog een punt
 - ...
 
@@ -191,6 +194,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+  - Ik miste nog een aantal lang="en" bij wat engelse tekst
+  - hover in een andere kleur miste bij een deel van de footer
+  - er miste nog een heading binnen twee articles op mijn website
+  - Nog even beter uitzoeken hoe de screenreader werkt
 
 </details>
 
@@ -206,12 +213,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 
+  Dit ging goed: ik ben lang bezig geweest met proberen responsive te maken van de pagina en bij sommige vlakken ging dat best goed zonder al te veel problemen waar ik tegen aanliep, waar ik blij mee was
+  Dit was lastig: nogsteeds lukt het menu niet helemaal. ik had nog summary en details toegevoegd alleen dit maakte het nog veel ingewikkelder met het uitklappen en responsive maken, dus die heb ik uiteindelijk weggelaten. Daarnaast vond ik het nog lastig om de tekst op een afbeelding te krijgen
+
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
   Student 1 - Iris
-  - menu klapt niet uit bij groot scherm -> fout van de website met javacript (dus is al verbeterd) nu alleen de knop weghalen bij groot scherm in de media query
+  - menu klapt niet uit bij groot scherm
   - tekst op afbeelding krijgen bij groot scherm > div gebruken
   - ruimte om plaatje wegkrijgen - background image van maken
 
@@ -235,10 +245,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1 - div gebruiken voor background img
+  - punt 1 - div gebruiken voor tekst op background img
   - punt 2 - background img maken van de img om de padding te vullen
-  - nog een punt
-  - ...
+  - punt 3 - menu klapt niet uit bij groot scherm -> fout van de website met javacript (dus is al verbeterd) nu alleen de knop weghalen bij groot scherm in de media query
 
 </details>
 
@@ -257,14 +266,25 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatjes
+  Ik heb de afgelopen weken heel veel geleerd van de lessen, voortgangsgesprekken en de studentassisten. Ik had eerder geen idee hoe je een website responsive maakt of bijv. een dark mode maakt en een root kan gebruiken voor algemene dingen.
+
+  Het schrijven van de html ging erg goed, vooral door de breakdownschets die we moesten maken voelde het als een handig hulpmiddel. Wel was het lastig dat we (bijna) geen sections/divs mochten gebruiken waardoor het wel heel erg puzzelen was vaak. Maar ik heb daar ook juist weer heel erg van geleerd. Ook heb ik meerde manieren van styling geleerd voor elementen wat ik heel waardevol vond. Ik ben ook best wel blij met het eindresultaat van de dark mode.
 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatjes
-
+  - details summary in responisve header: het lukte wel op de details te schrijven allen werkte mijn menu hierdoor neit goed en kosste het me teveel tijd om deze dan goed te krijgen in css kwa styling en responsiveness, dus helaas heb ik dat laten zitten.
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+
+  - de koe die bij de footer staat kreeg ik ook niet op de goede plek bij het kleiner maken van het scherm, hij staat daar nu een beetje op de tekst
+
+  - bij groot scherm is de afbeelding waar de h1 op staat niet helemaal strak: ik wilde geen div meer toevoegen omdat ik bijna al mijn css al had geschreven en zodra ik er een div bij zette veranderde de structuur waardoor de styling niet meer op de goede plek kwam. Heb heel veel geprobeerd maar het lukte niet dus heb het aan AI gevraagd
+
+  - zoekbalk knop in de header bij groot scherm, die dan uitklapt naar het formulier
+
+
 </details>
 
 
@@ -282,7 +302,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   1. bron 1: https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Responsive_images via studentassistent om plaatje te veranderen bij responsive
   2. bron 2: https://stackoverflow.com/questions/63902512/js-show-hide-header-on-scroll-effect-but-only-after-the-header-has-scrolled header vervaagt weg bij scrollen
-  3. https://webtalis.nl/embed-youtube-video-wordpress/ youtube video in html krijgen
-  4. https://www.a11yproject.com/posts/how-to-hide-content/ heading weghalen van de website maar wel zichtbaar voor screenreader
+  3. bron 3: https://webtalis.nl/embed-youtube-video-wordpress/ youtube video in html krijgen
+  4. bron 4: https://www.a11yproject.com/posts/how-to-hide-content/ heading weghalen van de website maar wel zichtbaar voor screenreader
+  5. bron 5: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ flexbox
+  6. bron 6: ChatGPT- ik kreeg het niet voor elkaar om een div toe te voegen zonder dat mijn hele section indeing veranderde waardoor alle styling van die sections weg ging*/
+  7: bron 7: https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns voor de grid
+
 
 </details>

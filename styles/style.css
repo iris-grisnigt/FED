@@ -17,15 +17,22 @@
   --color-header-background: #ffffff;
   --color-footer-text: #ffffff;
   --color-section1footer-background: #C4E7F3;
+  --color-footer-section1footer-a: #002f87;
+
+  --color-background-sections2: #EDF8FB; /*dit zijn de twee sections van tweede pagina*/
 }
 
+/* dark mode kleuren */
 @media (prefers-color-scheme: dark) {
   :root {
     --color-text: #ffffff;
-    --color-background: #000000;
+    --color-background: #202020;
     --color-footer-background: #1a3d1a;
     --color-header-background: #000000;
     --color-footer-text: #cccccc;
+	--color-section1footer-background: #679cae;
+
+	--color-background-sections2: rgb(45, 45, 88); 
   }
 }
 
@@ -132,11 +139,21 @@ select {
   border-radius: 0.5em;
 }
 
+/* bron 4: a11y project */
+.visually-hidden { 
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 
 /**********/
 /* HEADER */
 /**********/
-
 
 header {
   position: fixed;
@@ -220,6 +237,8 @@ button.is-open span:nth-of-type(3) {
 }
 
 
+
+
 /*************/
 /* NAVIGATIE */
 /*************/
@@ -234,7 +253,6 @@ nav {
   overflow: hidden;
   height: 100vh; /* menu is dicht */
   translate: 0 100%;
-  transition: max-height 0.5s ease;
   padding: 0 2em;
   z-index: 999;
 }
@@ -263,7 +281,6 @@ nav li a {
 }
 
 /* poging styling van summary details
-
 nav summary,
 nav > ul > li > a {
   font-family: "Chunk-Rethunk";
@@ -277,16 +294,6 @@ details li {
 } 
 */
 
-
-/*cookie instellingen knop*/
-body > button:last-of-type {
-	color: #001e80;
-	background-color: #76DDF5;
-	border: 1px solid white;
-	padding: 8px 16px;
-	position: fixed;
-	bottom: 0;
-}
 
 /**********/
 /* FOOTER */
@@ -345,7 +352,7 @@ footer section:nth-of-type(1) {
 }
 
 footer section:nth-of-type(1) a {
-	color: #002f87;
+	color: var(--color-footer-section1footer-a)
 }
 
 footer section:nth-of-type(1) h2 {
@@ -424,7 +431,12 @@ nav a:hover {
 
 footer a:hover {
 	text-decoration: underline;
-	color: yellow;
+	color: #FFE059;
+}
+
+/* eerste deel van de footer links */
+footer section:nth-of-type(1) a:hover {
+  color: #FFE059;
 }
 
 

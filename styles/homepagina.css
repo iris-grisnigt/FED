@@ -10,8 +10,26 @@
 /**************************************/
 
 /*eerste section*/
-main section:nth-of-type(1) {
-	padding: 2em;
+main section:nth-of-type(1) p {
+	padding: 0 2em 1em 2em;
+}
+
+main section:nth-of-type(1) h1 {
+	padding: 1em 1em 0 1em;
+}
+
+main section:nth-of-type(1) button {
+	margin-left: 2em;
+}
+
+main > section:nth-of-type(1) {
+  position: relative;
+}
+
+main > section:nth-of-type(1) img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 /*tweede section*/
@@ -24,37 +42,30 @@ main section:nth-of-type(2) img {
 	border-radius: 1em;
 }
 
-/* derde sectie */
-/* main section:nth-of-type(3) {
-	background-color: #201360;
-	color: white;
-    
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    padding: 2em;
-}
- */
-
+/* derde section */
 main section:nth-of-type(3) {
   background-color: #201360;
   color: white;
 
   display: flex;
-  flex-direction: column; /* mobiel: onder elkaar */
-  align-items: left;
+  flex-direction: column;
   gap: 1.5em;
-  padding: 2em;
+
+  padding: 0;
 }
 
-main section:nth-of-type(3) img {
-  max-width: 400px;
-  height: auto;
+main section:nth-of-type(3) article {
+    display: flex;
+    flex-direction: column; /* onder elkaar om gap te gebruiken voor ruimte ertussen */
+    gap: 1em;
+
+    padding: 2em;
 }
 
 main section:nth-of-type(3) h2 {
-    margin: 0;
+  margin: 0;
 }
+
 
 
 /*vierde section*/
@@ -69,7 +80,7 @@ main section:nth-of-type(4) h2 {
 main section:nth-of-type(4) ul {
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(9em, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(9em, 1fr)); /* MDN webdocs */
   padding: 1.5em;
 }
 
@@ -90,10 +101,39 @@ main section:nth-of-type(4) ul li img {
 /* styling als de browser minimaal 38em breed is (DESKTOP) */
 /***********************************************************/
 
+/* voor als ik de h1 op de img wil */
+/*bron AI - ik kreeg het niet voor elkaar om een div toe te voegen zonder dat mijn hele section indeing
+veranderde waardoor alle styling van die sections weg ging*/
+@media (min-width: 38em) {
+  main > section:nth-of-type(1) h1,
+  main > section:nth-of-type(1) p,
+  main > section:nth-of-type(1) button {
+    position: absolute;
+    left: 5%;
+    color: white;
+    max-width: 40%;
+    z-index: 1; /*boven de afbeelding*/
+  }
+
+  main > section:nth-of-type(1) h1 { 
+    bottom: 50%; /* 50% van onder */
+  }
+  main > section:nth-of-type(1) p { 
+    bottom: 20%; 
+  }
+  main > section:nth-of-type(1) button {
+    bottom: 10%;
+    color: black;
+  }
+
+  main > section:nth-of-type(1) {
+    padding: 0;
+  }
+}
+
 /**************************/
 /* STYLING TWEEDE SECTION */
 /**************************/
-
 @media (min-width: 38em) {
   main section:nth-of-type(2) {
     max-width: 50%;
@@ -103,35 +143,18 @@ main section:nth-of-type(4) ul li img {
 /*************************/
 /* STYLING DERDE SECTION */
 /*************************/
+/* afbeelding links tekst rechts */
 @media (min-width: 38em) {
   main section:nth-of-type(3) {
-    flex-direction: row;   /* afbeelding links, tekst rechts */
-    text-align: left;
-  }
-}
-
-/**************************/
-/* STYLING VIERDE SECTION */
-/**************************/
-
-
-
-@media (min-width: 38em) {
-  main section:nth-of-type(1) ul {
-    display: flex;
+    display: grid;
+    grid-template-columns: 50% 1fr;
     gap: 2em;
-    justify-content: space-between;
+    align-items: center;
+    padding: 0;
   }
 
-  section ul li {
-    flex: 1; /* li hebben gelijke breedte*/
-  }
-}
-
-@media (min-width: 38em) {
-  main section:nth-of-type(3) {
-    flex-direction: row;   /* afbeelding links, tekst rechts */
-    text-align: left;
+  main section:nth-of-type(3) article {
+    max-width: 70%;
   }
 }
 
@@ -139,30 +162,3 @@ main section:nth-of-type(4) ul li img {
 
 
 
-
-
-
-
- @media (min-width: 38em) {
-  /* de wrapper-div wordt de 'positioning context' */
-  main > div {
-    position: relative;
-  }
-
-  /* de tekstsectie bovenop de afbeelding */
-  main > div > section {
-    position: absolute;
-    bottom: 10%;       /* afstand vanaf de onderkant */
-    left: 5%;          /* uitlijnen vanaf de linkerkant */
-    color: white;
-    max-width: 40%;    /* niet te breed */
-    z-index: 1;        /* zorgt dat de tekst boven de afbeelding ligt */
-  }
-
-  /* afbeelding netjes laten schalen */
-  main > div picture img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-} 
