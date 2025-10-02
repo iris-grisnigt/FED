@@ -82,9 +82,6 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   https://miro.com/welcomeonboard/bDIySVRuaGsxV0FGK1IvTUd0VWdLRWEySEQ5WStteHRvNGkyWThETGV5amFDSlpRUkF0c3ZVVVJCUmhmN1U0Q1kzVTVmSWhXSU9PWXQ2MWJvU2lhVnZvWnIyOSt0TFJyNlk1VTRlbk1tQkorNy94ZTIvZXBObnhTVStlSGs1WVpQdGo1ZEV3bUdPQWRZUHQzSGl6V2NBPT0hdjE=?share_link_id=310430917738
   Link naar miro bord waarop ik de breakdown schetsen gemaakt heb.
 
-  ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
-
 </details>
 
 
@@ -177,9 +174,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
   - punt 1 - font kan je heel makkelijk bij Network -> Fonts downloaden
-  - punt 2 - 
-  - nog een punt
-- ...
+  - punt 2 - ul li indelen voor makkelijkere scheiding binnen een lijst in section
 
 </details>
 
@@ -214,7 +209,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 
   Dit ging goed: ik ben lang bezig geweest met proberen responsive te maken van de pagina en bij sommige vlakken ging dat best goed zonder al te veel problemen waar ik tegen aanliep, waar ik blij mee was
-  Dit was lastig: nogsteeds lukt het menu niet helemaal. ik had nog summary en details toegevoegd alleen dit maakte het nog veel ingewikkelder met het uitklappen en responsive maken, dus die heb ik uiteindelijk weggelaten. Daarnaast vond ik het nog lastig om de tekst op een afbeelding te krijgen
+  Dit was lastig: nogsteeds lukt het menu niet helemaal. ik had nog summary en details toegevoegd alleen dit maakte het nog veel ingewikkelder met het uitklappen en responsive maken, dus die heb ik uiteindelijk weggelaten. Daarnaast vond ik het nog lastig om de tekst op een afbeelding te krijgen.
 
 
   ### Agenda voor meeting
@@ -261,7 +256,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  eerste pagina:
+  <img src="readme-images/eind_homepagina.png" width="375px" alt="pagina 1">
+
+  tweede pagina:
+  <img src="readme-images/eind_tweedepagina.png" width="375px" alt="pagina 2">
 
 
   ### Dit ging goed/Heb ik geleerd: 
@@ -270,17 +269,19 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   Het schrijven van de html ging erg goed, vooral door de breakdownschets die we moesten maken voelde het als een handig hulpmiddel. Wel was het lastig dat we (bijna) geen sections/divs mochten gebruiken waardoor het wel heel erg puzzelen was vaak. Maar ik heb daar ook juist weer heel erg van geleerd. Ook heb ik meerde manieren van styling geleerd voor elementen wat ik heel waardevol vond. Ik ben ook best wel blij met het eindresultaat van de dark mode.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  <img src="readme-images/darkmode_website.png" width="375px" alt="screenshot van de darkmode">
 
 
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatjes
   - details summary in responisve header: het lukte wel op de details te schrijven allen werkte mijn menu hierdoor neit goed en kosste het me teveel tijd om deze dan goed te krijgen in css kwa styling en responsiveness, dus helaas heb ik dat laten zitten.
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  <img src="readme-images/details_summary.png" width="375px" alt="screenshot van de details">
 
   - de koe die bij de footer staat kreeg ik ook niet op de goede plek bij het kleiner maken van het scherm, hij staat daar nu een beetje op de tekst
+  <img src="readme-images/zwevende_koe.png" width="375px" alt="de koe">
 
-  - bij groot scherm is de afbeelding waar de h1 op staat niet helemaal strak: ik wilde geen div meer toevoegen omdat ik bijna al mijn css al had geschreven en zodra ik er een div bij zette veranderde de structuur waardoor de styling niet meer op de goede plek kwam. Heb heel veel geprobeerd maar het lukte niet dus heb het aan AI gevraagd
+  - bij groot scherm is de afbeelding waar de h1 op staat niet helemaal strak: ik wilde geen div meer toevoegen omdat ik bijna al mijn css al had geschreven en zodra ik er een div bij zette veranderde de structuur waardoor de styling niet meer op de goede plek kwam. Heb heel veel geprobeerd maar het lukte niet dus heb het aan AI gevraagd.
+  <img src="readme-images/image_article.png" width="375px" alt="tekst op het plaatje">
 
   - zoekbalk knop in de header bij groot scherm, die dan uitklapt naar het formulier
 
@@ -305,8 +306,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   3. bron 3: https://webtalis.nl/embed-youtube-video-wordpress/ youtube video in html krijgen
   4. bron 4: https://www.a11yproject.com/posts/how-to-hide-content/ heading weghalen van de website maar wel zichtbaar voor screenreader
   5. bron 5: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ flexbox
-  6. bron 6: ChatGPT- ik kreeg het niet voor elkaar om een div toe te voegen zonder dat mijn hele section indeing veranderde waardoor alle styling van die sections weg ging*/
-  7: bron 7: https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns voor de grid
+  6. bron 6: ChatGPT- ik kreeg het niet voor elkaar om een div toe te voegen zonder dat mijn hele section indeling veranderde waardoor alle styling van die sections weg ging
+  7. bron 7: https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns voor de grid
 
 
 </details>
